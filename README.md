@@ -1,3 +1,13 @@
 # Vision-based-grasping-GUI
 
-For running the code just need to run Start_Recording file :)
+Overview: 
+Hand dexterity and grasp disability in patients with spinal cord injury has devastating impacts over their lifespan. Restoration of hand dexterity is the highest priority among this population. While some invasive brain-machine interfaces (BMI) are customized to assist such patients to perform reach-and-grasp tasks with a robotic system, they lack dexterity, generalizability, and are cost inefficient. This creates difficulties and prevents accessibility for employing these devices in larger patient populations. 
+
+Purpose:
+The purpose of this study is to develop a noninvasive BMI platform that has the ability to predict  planned imaginary grip types and different preshaping actions based on electroencephalogram (EEG) recordings from a new, low-cost eight channel EEG headset (Unicorn Hybrid Black). Data collection for our pilot study included a preliminary protocol that consisted of collecting EEG recordings when the human subjects were instructed to consecutively power grip their left and right hands for a specified duration of time. Additionally, we are in the process of enlarging our dataset to collect planned grip types for dominant hands. As the initial step, we developed a machine learning pipeline using Python language. We analyzed the EEG data from the pilot study by considering the baseline and filtering into different bands. Based on the significance of slow oscillations recorded within the premotor cortex from invasive BMI studies, we selected the power of the 𝛿 (delta) band for feature extraction and classification. We focused on channels C3 and C4 to distinguish between left and right hand power grips. This yielded a percent accuracy of 55% (C3) and 80% (C4) using thresholding methods. 
+
+Current Investigation:
+Selected grip types for the new study are the transverse and lateral cylindrical grips. We hypothesize that the brain engages in preshapping of grip movement prior to the action or motor imagery of the grip movement. Classification of this period prior to the grip/imagery task will aid the process of overcoming limitations that restrict dexterous interaction of neurorehabilitation devices with objects. Our vision is to use this low cost platform to manipulate objects with a robotic arm among the disabled population. 
+
+Program Functionality:
+Total hardware and software synchrony/functionality are mainly controlled using the Start_Recording.py program. Run the Start_Recording.py file to begin EEG data collection while controlling both the motorized turn table platform/smart glasses, CSV EEG/event logging, and GUI presentation. Other files within this repository adjust parameters, timing/function of events, and initializes serial communication using between Python/Arduino. 
